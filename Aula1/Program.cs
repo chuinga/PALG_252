@@ -11,34 +11,43 @@ namespace Aula1
         static void Main(string[] args)
         {
             // Este é um comentário de uma linha
+            /*
+                Este 
+            é um comentário
+            de várias 
+            linhas
+            */
 
-            /* Este é um comentário
-               de váras linhas */
+            // C# Case sensitive - Patricia <> patricia
 
-            // C# é case sensitive - Miguel é diferente de miguel
+            Console.WriteLine("Olá Mundo!");
+            Console.Write("Olá Mundo!");
+            Console.Write("Patrícia");
+            Console.Write("\nPatrícia\tRocha\nSó porque sim!");
 
-            Console.WriteLine("Olá Mundo!"); // WriteLine quebra a linha
-            Console.Write("Olá Mundo do "); // Write não quebra a linha)
-            Console.Write("Miguel"); // Write não quebra a linha
-            Console.Write("\nMiguel\tViaja\npelo Mundo"); // \n quebra a linha, \t adiciona um tab
+            // \t - tabulação
+            // \n - quebra de linha
 
-            Console.ReadKey(); // Mantém a janela aberta até que uma tecla seja pressionada
+            //Console.ReadKey(); //Aguarda que uma tecla seja pressionada
 
             // Variáveis para armazenar dados do utilizador
             // Variáveis de texto - strings - armazenam texto e são rodeadas por aspas duplas
             // char - apenas contém um único caracter
 
-            // <tipo de variável> <nome da variável> = <valor>;
-            string nome = "Jarbas";
-            string utilizador;
+            // <tipode variável> <nome da variável> = <valor>;
+            string nome = "Maria";
+            string utilizador, sobrenome="Rocha";
 
             Console.WriteLine("Qual é o teu nome?");
-            // Ler e guardar o nome do utilizador
-            utilizador = Console.ReadLine(); // Lê uma linha de texto do utilizador
+            // Ler e Guardar o valor do nome do utilizador
+            utilizador = Console.ReadLine(); // Lê uma linha de texto de utilizador
 
-            Console.WriteLine("Olá " + utilizador + ", o meu nome é " + nome + "."); // Concatenação de strings
-
-            Console.WriteLine($"O meu nome é {nome} e o teu nome é {utilizador}."); // Interpolação de strings
+            //Exibir o nome do utilizador e uma mensagem
+            Console.WriteLine("Olá " + utilizador + "   " + "    " + sobrenome); //Concatenação de uma string utilizador e um literal de texto Olá
+            Console.WriteLine($"O meu nome é {utilizador}.");
+            Console.WriteLine("O meu nome é {0} {1}.", utilizador, sobrenome);
+            
+            Console.ReadKey();
         }
     }
 }

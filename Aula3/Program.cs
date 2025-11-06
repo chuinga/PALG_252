@@ -1,61 +1,107 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Aula3
 {
-    internal static class Program
-    {        
+    internal class Program
+    {
         static void Main(string[] args)
         {
             // Tipos de variáveis
             // string - variável de texto (cadeia de caracteres) - pode conter letras, números e símbolos
-            string nome; // declaração de variável
-            nome = "Miguel"; // atribuição de valor
+            string nome; // declaração
+            nome = "Maria"; // atribuição
 
-            // char - variável de um único caracter - letras, números ou símbolos - usa aspas simples
-            char letra = 'A'; // declaração e atribuição de valor
+            // char - armazena um único caracter - letra, simbolo, numero
+            char caracter = 'A';
 
             // variáveis numéricas
-            // int - números inteiros (sem casas decimais)
-            // byte (0 - 255) : 1 byte, sbyte, short, ushort, uint, long, ulong - outros tipos de inteiros com diferentes tamanhos e intervalos
+            // int - numeros inteiros 
+            // byte (0 - 255) : 1 byte, sbyte, short, ushort, uint, long, ulong : u for unsigned
             int numero = 123; // 4 bytes
-            int limiteMax = int.MaxValue; // valor máximo que um int pode armazenar
-            int limiteMin = int.MinValue; // valor mínimo que um int pode armazenar 
+            int limiteMax = int.MaxValue;
+            int limiteMin = int.MinValue;
 
-            uint uIntNumero = 156; // uint - números inteiros sem sinal (0 e positivos)
+            uint uIntNumero = 156;
             uint ulimiteMax = uint.MaxValue;
             uint ulimiteMin = uint.MinValue;
 
-            // Variáveis de ponto flutuante (números com casas decimais)
-            // float, double, decimal
-            // float - 4 bytes, precisão simples até 7 dígitos significativos
-            // double - 8 bytes, precisão dupla até 15-16 dígitos significativos
-            // decimal - 16 bytes, alta precisão, usado para valores monetários até 28-29 dígitos significativos
-            double myDouble = 12.6978; // double é o tipo padrão para números com casas decimais
-            int myIntDouble = (int)myDouble; // Cast explicito
-            double myDouble2 = numero; // Cast implicito
-            float myFloat = 12.69f; // o 'f' indica que é um float
-            decimal myDecimal = 12.6978m; // o 'm' indica que é um decimal
+            // Variáveis de ponto flutuante
+            // float : 4 bytes, double, decimal : 16 bytes
+            double myDouble = 12.69;
+            int myIntDouble = (int)myDouble; // Cast Explicito
+            double myDouble2 = numero; // Cast Implicito
+            float myFloat = 156.98f;
+            decimal myDecimal = 59.56m;
 
-            // bool - armazena valores lógicos: true (verdadeiro) ou false (falso)
+            // bool - armazenam valores do tipo true or false
             bool myBool = false;
 
-            // arrays, lists, arrayList, dictionaries, enums - estruturas de dados mais complexas
+            // arrays, lists, arrayList, dictionaries, enums - a dar ao longo da matéria
 
 
-            int idade;
-            float preco;
+            //int idade;
+            //float preco;
+            //idade = int.Parse(Console.ReadLine());
+            //preco = float.Parse(Console.ReadLine());
 
-            idade = int.Parse(Console.ReadLine()); 
-            preco = float.Parse(Console.ReadLine());
-
-            
             // Operadores aritméticos
             // + - * / %
 
+            //Incrementação / Decrementação
+            // ++ / -- -> Incrementam/Decrementam o operador inteiro por 1
+
+            //int num1, num2;
+            //float soma, subtracao, divisao, multiplicacao, restoDivisao;
+
+            //Console.Write("Escreve o primeiro número: ");
+            //num1 = int.Parse(Console.ReadLine());
+
+            //Console.Write("Escreve o segundo número: ");
+            //num2 = int.Parse(Console.ReadLine());
+
+            //soma = num1 + num2;
+            //subtracao = num1 - num2;
+            //divisao = (float)num1 / num2;
+            //multiplicacao = num1 * num2;
+            //restoDivisao = num1 % num2;
+
+            //Console.WriteLine($"{num1}+{num2}={soma}");
+            //Console.WriteLine($"{num1}-{num2}={subtracao}");
+            //Console.WriteLine($"{num1}/{num2}={divisao:0.00}"); // Valor decimal / float com duas casas decimais
+            //Console.WriteLine($"{num1}*{num2}={multiplicacao:F2}"); // Ponto fixo com duas casas decimais
+            //Console.WriteLine($"{num1}%{num2}={restoDivisao}");
+
+            //Incrementar
+            int myIntToIncrement = 9, myIntToIncrement2;
+            //myIntToIncrement = myIntToIncrement + 1; // atribuir à variável myIntToIncrement o seu valor + 1
+            //myIntToIncrement += 1; // atribuir à variável myIntToIncrement o seu valor + 1
+            Console.WriteLine(myIntToIncrement);
+            myIntToIncrement2 = myIntToIncrement++;  // atribuir à variável myIntToIncrement o seu valor + 1 - Incrementação com Pós-incremento
+            Console.WriteLine($"Int1: {myIntToIncrement}, Int2: {myIntToIncrement2}");
+
+
+            myIntToIncrement = 9;
+            myIntToIncrement2 = 0;
+            myIntToIncrement2 = ++myIntToIncrement; // Incrementação com pré-incremento
+            Console.WriteLine($"Int1: {myIntToIncrement}, Int2: {myIntToIncrement2}");
+
+            //Decrementar
+            myIntToIncrement2 = myIntToIncrement--; // Decrementração com pós-decremento //Atribui primeiro o valor e depois decrementa
+            Console.WriteLine($"Int1: {myIntToIncrement}, Int2: {myIntToIncrement2}"); 
+            myIntToIncrement2 = --myIntToIncrement; // Decrementração com pré-decremento // Decrementa primeiro e depois atribui o valor
+            Console.WriteLine($"Int1: {myIntToIncrement}, Int2: {myIntToIncrement2}");
+
+            // Verdadeiro ou Falso
+            bool myBool2;
+
+            // Operadores relacionais 
+            // > >= < <= == !=
+            myBool2 = myIntToIncrement > myIntToIncrement2;
+            Console.WriteLine(myBool2);
 
         }
     }
