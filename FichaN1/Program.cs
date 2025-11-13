@@ -416,7 +416,7 @@ namespace TrocaVariaveis
             */
 
 
-
+            
             // Exercício 17
             // Preços por quilo
             const double precoBanana = 1.20;
@@ -443,6 +443,7 @@ namespace TrocaVariaveis
             Console.WriteLine($"Total faturado com maçãs:   {totalMacas:F2} €");
             Console.WriteLine($"Total faturado no dia:      {totalFaturado:F2} €");
             Console.WriteLine($"Valor a guardar (10%):      {poupanca:F2} €");
+            
         }
     }
 }
