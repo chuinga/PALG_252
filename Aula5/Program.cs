@@ -33,6 +33,8 @@ namespace Aula5
 
             int j = 0;
 
+            Console.WriteLine("Do While loop:");
+
             do
             {
                 Console.WriteLine(j);
@@ -45,12 +47,16 @@ namespace Aula5
             //     statements
             //  }
 
+            Console.WriteLine("For loop:");
+
             for (int k = 1; k < 5; k++)
             {
                 Console.WriteLine(k);
             }
 
             // Nested Loops
+
+            Console.WriteLine("Nested Loops:");
 
             for (int h = 0; h < 3; h++)
             {
