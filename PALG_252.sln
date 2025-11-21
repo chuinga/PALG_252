@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exerc02_Loops", "Exerc02_Lo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula5_Arrays", "Aula5_Arrays\Aula5_Arrays.csproj", "{8D84CED3-F0FA-4AE3-9BE9-C94E32A29FD7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tabuada", "Tabuada\Tabuada.csproj", "{17CDCAD9-7191-4601-8160-F829B1E3D11E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{8D84CED3-F0FA-4AE3-9BE9-C94E32A29FD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D84CED3-F0FA-4AE3-9BE9-C94E32A29FD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D84CED3-F0FA-4AE3-9BE9-C94E32A29FD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17CDCAD9-7191-4601-8160-F829B1E3D11E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17CDCAD9-7191-4601-8160-F829B1E3D11E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17CDCAD9-7191-4601-8160-F829B1E3D11E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17CDCAD9-7191-4601-8160-F829B1E3D11E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
