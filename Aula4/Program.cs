@@ -19,7 +19,7 @@ namespace Aula4
 
             double doub = 12.65;
 
-            if ( (doub > 20.22)
+            if ( (doub > 20.22))
             {
                 Console.WriteLine("Double grande");
             }
