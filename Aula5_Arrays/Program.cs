@@ -130,7 +130,7 @@ namespace Aula4_Arrays
 
             #endregion
 
-            //#region Random Numbers
+            #region Random Numbers
             //Console.WriteLine("\nNúmeros aleatórios:");
             //// Preencher um array com números gerados aleatoriamente e apresentar as estatísticas desses valores
             //int[] aleatorios = new int[50];
@@ -163,7 +163,7 @@ namespace Aula4_Arrays
 
             //foreach (int va in aleatorios)
             //    Console.Write($" {va}");
-            //#endregion
+            #endregion
 
             #region Listas
             //const int DIM = 5;

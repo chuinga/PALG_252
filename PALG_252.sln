@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.14.36623.8
+# Visual Studio Version 18
+VisualStudioVersion = 18.0.11222.15 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula1", "Aula1\Aula1.csproj", "{5CF23189-C3A9-4EE0-9F89-75F40570FCE9}"
 EndProject
@@ -36,6 +36,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ficha2.1", "Ficha2.1\Ficha2.1.csproj", "{FF354C9F-0661-4DBF-A27A-581D3AA9BA5C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExercAlturas", "ExercAlturas\ExercAlturas.csproj", "{D2B8FD97-8C12-4AA6-B253-B51CF4DBF739}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ficha3", "Ficha3\Ficha3.csproj", "{52F28DAA-F7EE-4717-954C-BC42BB62186A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -111,6 +113,10 @@ Global
 		{D2B8FD97-8C12-4AA6-B253-B51CF4DBF739}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2B8FD97-8C12-4AA6-B253-B51CF4DBF739}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2B8FD97-8C12-4AA6-B253-B51CF4DBF739}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52F28DAA-F7EE-4717-954C-BC42BB62186A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52F28DAA-F7EE-4717-954C-BC42BB62186A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52F28DAA-F7EE-4717-954C-BC42BB62186A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52F28DAA-F7EE-4717-954C-BC42BB62186A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
