@@ -14,54 +14,54 @@ namespace Ficha4
         static void Main(string[] args)
         {
             #region Exercício 1
-            // 1. Crie uma lista de números inteiros e adicione dez valores à sua escolha. A seguir,
-            // remova todos os números pares da lista e ordene os restantes em ordem
-            // crescente.Por fim, imprima todos os números presentes na lista e indique o
-            // número total de elementos que ficaram.
+            //// 1. Crie uma lista de números inteiros e adicione dez valores à sua escolha. A seguir,
+            //// remova todos os números pares da lista e ordene os restantes em ordem
+            //// crescente.Por fim, imprima todos os números presentes na lista e indique o
+            //// número total de elementos que ficaram.
 
-            // Criar lista vazia
-            List<int> numeros = new List<int>();
+            //// Criar lista vazia
+            //List<int> numeros = new List<int>();
 
-            // Solicitar 10 números ao utilizador
-            Console.WriteLine("Introduza 10 números inteiros:");
-            for (int i = 1; i <= 10; i++)
-            {
-                int numero;
-                bool valido = false;
+            //// Solicitar 10 números ao utilizador
+            //Console.WriteLine("Introduza 10 números inteiros:");
+            //for (int i = 1; i <= 10; i++)
+            //{
+            //    int numero;
+            //    bool valido = false;
 
-                while (!valido)
-                {
-                    Console.Write($"Número {i}: ");
-                    string input = Console.ReadLine();
+            //    while (!valido)
+            //    {
+            //        Console.Write($"Número {i}: ");
+            //        string input = Console.ReadLine();
 
-                    if (int.TryParse(input, out numero))
-                    {
-                        numeros.Add(numero);
-                        valido = true;
-                    }
-                    else
-                        Console.WriteLine("Erro! Introduza um número inteiro válido.");
-                }
-            }
+            //        if (int.TryParse(input, out numero))
+            //        {
+            //            numeros.Add(numero);
+            //            valido = true;
+            //        }
+            //        else
+            //            Console.WriteLine("Erro! Introduza um número inteiro válido.");
+            //    }
+            //}
 
-            Console.WriteLine("\nLista original:");
-            foreach (int num in numeros)
-                Console.Write(num + " ");
-            Console.WriteLine("\n");
+            //Console.WriteLine("\nLista original:");
+            //foreach (int num in numeros)
+            //    Console.Write(num + " ");
+            //Console.WriteLine("\n");
 
-            // Remover todos os números pares
-            numeros.RemoveAll(n => n % 2 == 0);
+            //// Remover todos os números pares
+            //numeros.RemoveAll(n => n % 2 == 0);
 
-            // Ordenar em ordem crescente
-            numeros.Sort();
+            //// Ordenar em ordem crescente
+            //numeros.Sort();
 
-            // Imprimir lista final
-            Console.WriteLine("Lista após remover pares e ordenar:");
-            foreach (int num in numeros)
-                Console.Write(num + " ");
+            //// Imprimir lista final
+            //Console.WriteLine("Lista após remover pares e ordenar:");
+            //foreach (int num in numeros)
+            //    Console.Write(num + " ");
 
-            // Indicar total de elementos
-            Console.WriteLine("\n\nNúmero total de elementos: " + numeros.Count);
+            //// Indicar total de elementos
+            //Console.WriteLine("\n\nNúmero total de elementos: " + numeros.Count);
 
             #endregion
 
@@ -70,6 +70,55 @@ namespace Ficha4
             // acrescente mais duas frutas à lista e elimine a primeira fruta adicionada. Ordene
             // a lista por ordem alfabética e, utilizando um ciclo foreach, imprima todos os
             // elementos da lista. 
+
+            // Criar ArrayList vazio
+            ArrayList frutas = new ArrayList();
+
+            // Solicitar 5 frutas ao utilizador
+            Console.WriteLine("=== Adicionar 5 frutas ===");
+            for (int i = 1; i <= 5; i++)
+            {
+                Console.Write($"Fruta {i}: ");
+                string fruta = Console.ReadLine();
+                frutas.Add(fruta);
+            }
+
+            Console.WriteLine("\n=== Lista inicial de frutas ===");
+            foreach (string fruta in frutas)
+                Console.WriteLine("- " + fruta);
+            Console.WriteLine($"Total: {frutas.Count} frutas\n");
+
+            // Solicitar mais duas frutas
+            Console.WriteLine("=== Adicionar mais 2 frutas ===");
+            for (int i = 1; i <= 2; i++)
+            {
+                Console.Write($"Fruta adicional {i}: ");
+                string fruta = Console.ReadLine();
+                frutas.Add(fruta);
+            }
+
+            Console.WriteLine("\n=== Após adicionar 2 frutas ===");
+            foreach (string fruta in frutas)
+                Console.WriteLine("- " + fruta);
+            Console.WriteLine($"Total: {frutas.Count} frutas\n");
+
+            // Remover a primeira fruta adicionada (índice 0)
+            Console.WriteLine($"A remover a primeira fruta: {frutas[0]}\n");
+            frutas.RemoveAt(0);
+
+            Console.WriteLine("=== Após remover a primeira fruta ===");
+            foreach (string fruta in frutas)
+                Console.WriteLine("- " + fruta);
+            Console.WriteLine($"Total: {frutas.Count} frutas\n");
+
+            // Ordenar por ordem alfabética
+            frutas.Sort();
+
+            // Imprimir lista final com foreach
+            Console.WriteLine("=== Lista final ordenada alfabeticamente ===");
+            foreach (string fruta in frutas)
+                Console.WriteLine("- " + fruta);
+            Console.WriteLine($"Total: {frutas.Count} frutas");
 
 
             #endregion
