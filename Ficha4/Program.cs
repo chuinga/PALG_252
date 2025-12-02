@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -17,6 +18,50 @@ namespace Ficha4
             // remova todos os números pares da lista e ordene os restantes em ordem
             // crescente.Por fim, imprima todos os números presentes na lista e indique o
             // número total de elementos que ficaram.
+
+            // Criar lista vazia
+            List<int> numeros = new List<int>();
+
+            // Solicitar 10 números ao utilizador
+            Console.WriteLine("Introduza 10 números inteiros:");
+            for (int i = 1; i <= 10; i++)
+            {
+                int numero;
+                bool valido = false;
+
+                while (!valido)
+                {
+                    Console.Write($"Número {i}: ");
+                    string input = Console.ReadLine();
+
+                    if (int.TryParse(input, out numero))
+                    {
+                        numeros.Add(numero);
+                        valido = true;
+                    }
+                    else
+                        Console.WriteLine("Erro! Introduza um número inteiro válido.");
+                }
+            }
+
+            Console.WriteLine("\nLista original:");
+            foreach (int num in numeros)
+                Console.Write(num + " ");
+            Console.WriteLine("\n");
+
+            // Remover todos os números pares
+            numeros.RemoveAll(n => n % 2 == 0);
+
+            // Ordenar em ordem crescente
+            numeros.Sort();
+
+            // Imprimir lista final
+            Console.WriteLine("Lista após remover pares e ordenar:");
+            foreach (int num in numeros)
+                Console.Write(num + " ");
+
+            // Indicar total de elementos
+            Console.WriteLine("\n\nNúmero total de elementos: " + numeros.Count);
 
             #endregion
 
