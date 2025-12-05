@@ -229,22 +229,177 @@ namespace Ficha4
             #endregion
 
             #region Exercício 4
-            // 4. Crie uma lista de strings com cinco nomes de pessoas diferentes. Pergunte ao
-            // utilizador que introduza um carácter e apresente todos os nomes que contenham
-            // esse carácter, ignorando diferenças entre maiúsculas e minúsculas.De seguida,
-            // inverta cada nome da lista e apresente-os novamente.
+            //// 4. Crie uma lista de strings com cinco nomes de pessoas diferentes. Pergunte ao
+            //// utilizador que introduza um carácter e apresente todos os nomes que contenham
+            //// esse carácter, ignorando diferenças entre maiúsculas e minúsculas.De seguida,
+            //// inverta cada nome da lista e apresente-os novamente.
+
+            //// Criar lista com 5 nomes
+            //List<string> nomes = new List<string> { "Ana", "Bruno", "Carla", "Daniel", "Eduardo" };
+
+            //Console.WriteLine("Lista de nomes:");
+            //foreach (string nome in nomes)
+            //    Console.WriteLine("- " + nome);
+
+            //// Solicitar carácter ao utilizador
+            //Console.Write("\nIntroduza um carácter para procurar: ");
+            //char caractere = Console.ReadKey().KeyChar;
+            //Console.WriteLine("\n");
+
+            //// Procurar nomes que contenham o carácter (ignorando maiúsculas/minúsculas)
+            //Console.WriteLine($"Nomes que contêm o carácter '{caractere}':");
+            //bool encontrou = false;
+
+            //foreach (string nome in nomes)
+            //    if (nome.ToLower().Contains(caractere.ToString().ToLower()))
+            //    {
+            //        Console.WriteLine("- " + nome);
+            //        encontrou = true;
+            //    }
+
+            //if (!encontrou)
+            //    Console.WriteLine("Nenhum nome contém esse carácter.");
+
+            //// Inverter cada nome e apresentar
+            //Console.WriteLine("\n\nNomes invertidos:");
+            //foreach (string nome in nomes)
+            //{
+            //    char[] arrayCaracteres = nome.ToCharArray();
+            //    Array.Reverse(arrayCaracteres);
+            //    string nomeInvertido = new string(arrayCaracteres);
+            //    Console.WriteLine($"{nome} -> {nomeInvertido}");
+            //}
 
 
             #endregion
 
             #region Exercício 5
-            // 5. Crie um dicionário em que cada chave corresponda ao nome de um utilizador e o
-            // valor associado seja uma lista de músicas da sua playlist. Adicione três
-            // utilizadores, cada um com pelo menos quatro músicas na sua lista. Acrescente
-            // uma nova música à playlist de um dos utilizadores e remova uma música da
-            // playlist de outro. Percorra o dicionário e imprima o nome de cada utilizador
-            // juntamente com todas as músicas da sua playlist e no final indique também o
-            // número total de músicas de cada utilizador.
+            //// 5. Crie um dicionário em que cada chave corresponda ao nome de um utilizador e o
+            //// valor associado seja uma lista de músicas da sua playlist. Adicione três
+            //// utilizadores, cada um com pelo menos quatro músicas na sua lista. Acrescente
+            //// uma nova música à playlist de um dos utilizadores e remova uma música da
+            //// playlist de outro. Percorra o dicionário e imprima o nome de cada utilizador
+            //// juntamente com todas as músicas da sua playlist e no final indique também o
+            //// número total de músicas de cada utilizador.
+
+            //Dictionary<string, List<string>> playlists = new Dictionary<string, List<string>>();
+
+            //// Adicionar 3 utilizadores
+            //Console.WriteLine("=== CRIAR PLAYLISTS ===\n");
+
+            //for (int i = 1; i <= 3; i++)
+            //{
+            //    Console.Write($"Nome do utilizador {i}: ");
+            //    string nomeUtilizador = Console.ReadLine();
+
+            //    List<string> musicas = new List<string>();
+
+            //    // Pedir pelo menos 4 músicas
+            //    Console.WriteLine($"\nAdicione pelo menos 4 músicas para {nomeUtilizador}:");
+            //    for (int j = 1; j <= 4; j++)
+            //    {
+            //        Console.Write($"  Música {j}: ");
+            //        string musica = Console.ReadLine();
+            //        musicas.Add(musica);
+            //    }
+
+            //    // Perguntar se quer adicionar mais músicas
+            //    bool adicionarMais = true;
+            //    int contador = 5;
+
+            //    while (adicionarMais)
+            //    {
+            //        Console.Write($"Adicionar mais uma música? (S/N): ");
+            //        string resposta = Console.ReadLine().ToUpper();
+
+            //        if (resposta == "S")
+            //        {
+            //            Console.Write($"  Música {contador}: ");
+            //            string musica = Console.ReadLine();
+            //            musicas.Add(musica);
+            //            contador++;
+            //        }
+            //        else
+            //            adicionarMais = false;
+            //    }
+
+            //    playlists.Add(nomeUtilizador, musicas);
+            //    Console.WriteLine();
+            //}
+
+            //// Mostrar playlists atuais
+            //Console.WriteLine("\n=== PLAYLISTS INICIAIS ===");
+            //MostrarPlaylists(playlists);
+
+            //// Adicionar nova música a um utilizador
+            //Console.WriteLine("\n=== ADICIONAR MÚSICA ===");
+            //Console.Write("Nome do utilizador para adicionar música: ");
+            //string userAdicionar = Console.ReadLine();
+
+            //if (playlists.ContainsKey(userAdicionar))
+            //{
+            //    Console.Write("Nome da música a adicionar: ");
+            //    string novaMusica = Console.ReadLine();
+            //    playlists[userAdicionar].Add(novaMusica);
+            //    Console.WriteLine($"Música '{novaMusica}' adicionada à playlist de {userAdicionar}!\n");
+            //}
+            //else
+            //    Console.WriteLine("Utilizador não encontrado!\n");
+
+            //// Remover música de um utilizador
+            //Console.WriteLine("=== REMOVER MÚSICA ===");
+            //Console.Write("Nome do utilizador para remover música: ");
+            //string userRemover = Console.ReadLine();
+
+            //if (playlists.ContainsKey(userRemover))
+            //{
+            //    Console.WriteLine($"\nMúsicas de {userRemover}:");
+            //    int indice = 1;
+            //    foreach (string musica in playlists[userRemover])
+            //    {
+            //        Console.WriteLine($"  {indice}. {musica}");
+            //        indice++;
+            //    }
+
+            //    bool remocaoValida = false;
+            //    while (!remocaoValida)
+            //    {
+            //        Console.Write("\nNúmero da música a remover: ");
+            //        string input = Console.ReadLine();
+
+            //        if (int.TryParse(input, out int numMusica) && numMusica > 0 && numMusica <= playlists[userRemover].Count)
+            //        {
+            //            string musicaRemovida = playlists[userRemover][numMusica - 1];
+            //            playlists[userRemover].RemoveAt(numMusica - 1);
+            //            Console.WriteLine($"Música '{musicaRemovida}' removida da playlist de {userRemover}!\n");
+            //            remocaoValida = true;
+            //        }
+            //        else
+            //            Console.WriteLine("Número inválido! Tente novamente.");
+            //    }
+            //}
+            //else
+            //    Console.WriteLine("Utilizador não encontrado!\n");
+
+            //// Mostrar playlists finais
+            //Console.WriteLine("\n=== PLAYLISTS FINAIS ===");
+            //MostrarPlaylists(playlists);
+            //}
+
+            //// Método auxiliar para mostrar todas as playlists
+            //static void MostrarPlaylists(Dictionary<string, List<string>> playlists)
+            //{
+            //    foreach (var utilizador in playlists)
+            //    {
+            //        Console.WriteLine($"\nUtilizador: {utilizador.Key}");
+            //        Console.WriteLine("Músicas:");
+
+            //        foreach (string musica in utilizador.Value)
+            //            Console.WriteLine($"   - {musica}");
+
+            //        Console.WriteLine($"Total de músicas: {utilizador.Value.Count}");
+            //    }
+            //    Console.WriteLine();
 
             #endregion
 
